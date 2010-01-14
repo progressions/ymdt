@@ -1,3 +1,4 @@
+require 'rubygems'
 require 'string_masker'
 
 module YMDT
