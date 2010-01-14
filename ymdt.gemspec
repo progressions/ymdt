@@ -26,7 +26,8 @@ Gem::Specification.new do |s|
      "lib/ymdt.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb",
-     "spec/ymdt_spec.rb"
+     "spec/ymdt_spec.rb",
+     "ymdt.gemspec"
   ]
   s.homepage = %q{http://github.com/progressions/ymdt}
   s.rdoc_options = ["--charset=UTF-8"]
