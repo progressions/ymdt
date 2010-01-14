@@ -60,6 +60,8 @@ module YMDT
     
     private
     
+    # print the command on the screen
+    #
     def output_command(command_string)
       $stdout.puts
       $stdout.puts StringMasker.new(command_string, :username => username, :password => password).to_s
