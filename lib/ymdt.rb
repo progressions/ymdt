@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'string_masker'
 
-module YMDT
+module YMDT #:nodoc:
   class System
     def self.execute(command, params={})
       if params[:return]
@@ -12,6 +12,21 @@ module YMDT
     end
   end
   
+  # Wraps calls to the Yahoo! Mail Development Tool for creating applications
+  # with the Yahoo! Mail Development Platform. 
+  #
+  # == Usage
+  #
+  #   @ymdt = YMDT::Base.new(:username => "username", :password => "password")
+  #
+  # Uploads all files in "my_app/views":
+  #
+  #   @ymdt.put(:path => "/my_app/views/*")
+  #
+  # Creates a new local server from the given application_id:
+  #
+  #   @ymdt.create(:path => "/my_new_app", :application_id => "abcdefg")
+  #
   class Base
     attr_accessor :username, :password, :applications_path, :script_path
   
