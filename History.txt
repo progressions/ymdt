@@ -1,0 +1,4 @@
+== 0.0.1 2010-01-13
+  * major enhancements
+    * wrapper for YMDT script
+    * <tt>get</tt>, <tt>put</tt>, <tt>ls</tt> commands
