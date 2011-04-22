@@ -52,6 +52,10 @@ module YMDT #:nodoc:
       invoke(:get, params)
     end
     
+    def compress(params={})
+      invoke(:compress, params)
+    end
+    
     def create(params={})
       raise ArgumentError.new("application_id required") unless params[:application_id]
       invoke(:get, params)
@@ -99,6 +103,11 @@ module YMDT #:nodoc:
       # execute script
       #
       options << script_path
+            
+      # if :compress is true compress it
+      if params[:compress]
+        command = "compress"
+      end
       
       # command (:put, :get, etc)
       #
